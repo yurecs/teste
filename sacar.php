@@ -9,7 +9,7 @@ require 'config.php';
 
 $valor = $_POST['saque'];
 
-if(!empty($valor)){
+if(!empty($valor) && is_numeric($valor)){
     
     if(($valor > $saldo)){
         
@@ -25,7 +25,7 @@ if(!empty($valor)){
     
 }else{
     
-    echo 'Para sacar é preciso informar um valor maior que zero.';
+    echo 'Para sacar é preciso informar um valor numérico maior que zero.';
     
 }
 
