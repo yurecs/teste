@@ -12,11 +12,15 @@ $valor = $_POST['saque'];
 if(!empty($valor)){
     
     if(($valor > $saldo)){
+        
         echo 'Esse valor excede o saldo disponível!';
+        
     }elseif($valor > ($saldo - $minimo)){
+        
         echo 'É preciso que seja deixada uma quatidade mínima para que a conta não seja fechada!';
+        
     }else{
-        // Código de saque
+        // Função para retornar dinheiro sacado
     }
     
 }else{
